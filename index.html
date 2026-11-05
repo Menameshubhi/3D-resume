@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shubhangi · Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nunito:wght@400;600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="hero">
+  <canvas id="scene"></canvas>
+
+  <header class="bar">
+    <a class="brand" href="#hero"><span class="gem"></span>shubhangi</a>
+    <nav><a href="#projects">projects</a><a href="#work">work</a><a href="#testimonials">kind words</a><a href="#extras">extras</a><a href="#hero">about</a></nav>
+  </header>
+
+  <div class="intro" id="intro">
+    <p class="eyebrow">welcome to my room</p>
+    <h1>Hi, I'm Shubhangi</h1>
+    <p class="sub">Pull up a chair. Click anything in the room to see what I do, read, watch &amp; wander through.</p>
+  </div>
+
+  <aside class="panel" id="panel" aria-live="polite">
+    <button class="back" id="back">&larr; back to room</button>
+    <div id="panelBody"></div>
+  </aside>
+
+  <div class="hint" id="hint"><svg class="hint-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v8h4l-7 9-7-9h4z" fill="#ff8fb8" stroke="#3d3556" stroke-width="2" stroke-linejoin="miter"/></svg>Click any object the arrow is pointing at</div>
+  <a class="scroll" href="#projects">scroll for my work <span>&darr;</span></a>
+  <button id="sound" class="sound" type="button" aria-label="Toggle sound">♪ sound on</button>
+  <div id="bubble"></div>
+  <div id="tip"></div>
+</section>
+
+<section id="projects">
+  <div class="proj-wrap">
+    <div class="proj-head">
+      <canvas id="glasses" class="glasses" width="240" height="130" aria-label="Voxel computer glasses"></canvas>
+      <p class="eyebrow">selected work</p>
+      <h2>Projects</h2>
+      <p class="proj-sub" id="projSub"></p>
+    </div>
+    <div class="proj-grid" id="projGrid"></div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="work-grid">
+    <div class="work-left">
+      <canvas id="imac" class="imac" width="220" height="190" aria-label="Voxel iMac G3"></canvas>
+      <p class="eyebrow">where I've worked</p>
+      <h2>Work experience</h2>
+      <p class="work-sum" id="workSummary"></p>
+      <a class="resume-btn" id="resumeBtn" href="#" download>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg>
+        Download resume
+      </a>
+    </div>
+    <ol class="tl" id="workList"></ol>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="sec-wrap">
+    <p class="eyebrow">praise from peers</p>
+    <h2>Testimonials</h2>
+    <p class="sec-sub" id="testiSub"></p>
+    <div class="testi-grid" id="testiGrid"></div>
+  </div>
+</section>
+
+<section id="extras">
+  <canvas id="extrasBg" class="sec-bg" aria-hidden="true"></canvas>
+  <div class="sec-wrap">
+    <p class="eyebrow">around the internet</p>
+    <h2>Extras</h2>
+    <p class="sec-sub" id="extrasSub"></p>
+    <div class="extras-grid" id="extrasGrid"></div>
+  </div>
+</section>
+
+<footer id="footer" class="foot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <a class="brand" href="#hero"><span class="gem"></span>shubhangi</a>
+      <p id="footTag"></p>
+      <a class="foot-resume" id="footResume" href="#" download>Download resume</a>
+    </div>
+    <nav class="foot-col" aria-label="Sections">
+      <h4>Explore</h4>
+      <a href="#hero">About me</a><a href="#projects">Projects</a><a href="#work">Work experience</a><a href="#testimonials">Testimonials</a><a href="#extras">Extras</a>
+    </nav>
+    <div class="foot-col" aria-label="Social links">
+      <h4>Find me</h4>
+      <div class="foot-social" id="footSocial"></div>
+    </div>
+  </div>
+  <div class="foot-bar">
+    <span id="footCopy"></span>
+    <button class="foot-top" id="toTop" type="button">Back to top <span aria-hidden="true">&uarr;</span></button>
+  </div>
+</footer>
+
+<script src="vendor/three.min.js"></script>
+<script>
+  // dev-only: always fetch fresh JS/CSS while we iterate on the draft
+  document.write('<script src="content.js?v=' + Date.now() + '"><\/script><script src="main.js?v=' + Date.now() + '"><\/script><script src="imac.js?v=' + Date.now() + '"><\/script><script src="projects.js?v=' + Date.now() + '"><\/script><script src="extras.js?v=' + Date.now() + '"><\/script><script src="extras-bg.js?v=' + Date.now() + '"><\/script>');
+</script>
+<div id="toast" class="toast" role="status"></div>
+</body>
+</html>
